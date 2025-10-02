@@ -64,7 +64,7 @@ export default function Landing() {
         </SignInButton>
       </section>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-20 md:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 py-4 md:grid-cols-2">
         <Section direction="left">
           <h2 className="text-3xl font-bold">Track Your Jobs</h2>
           <p className="mt-2 text-neutral-400">Keep all your jobs organized in one place.</p>
