@@ -20,7 +20,7 @@ export const jobs = createTable(
     userId: d.varchar('user_id', { length: 256 }).notNull(),
     location: d.varchar('location', { length: 256 }).notNull(),
     event: d.varchar('event', { length: 256 }).notNull(),
-    date: d.date('date').notNull(),
+    date: d.date('date', { mode: 'date' }).notNull(),
     hours: d.float('hours').notNull(),
     positionId: d
       .bigint('position_id', { mode: 'number' })

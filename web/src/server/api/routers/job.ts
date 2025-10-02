@@ -6,7 +6,11 @@ import { jobs, positions } from '~/server/db/schema';
 const jobSchema = z.object({
   location: z.string().min(1),
   event: z.string().min(1),
-  date: z.date(),
+  date: z
+    .date()
+    .transform(
+      (date) => new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), 12, 0)),
+    ),
   hours: z.number().min(0),
   positionId: z.number(),
 });
